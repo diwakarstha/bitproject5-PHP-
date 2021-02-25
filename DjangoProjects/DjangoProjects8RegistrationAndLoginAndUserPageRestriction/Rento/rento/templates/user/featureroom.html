@@ -1,0 +1,349 @@
+{% extends 'user/base.html' %}
+{% block title %}AddRoom{% endblock title %}
+{% block body %}
+    <!-- dashboard start -->
+        <div class="col-md-9 col-lg-9" style="background-color: #4d4d4d;">
+          <div class="container pt-3">
+            <h5 class="text-light">Room List</h5>
+            <div class="bg-light py-2 pe-2">
+              <div class="row">
+              <div class="col-6">
+              <p class="fw-bold d-flex ps-3 justify-content-start">10 per page</p>
+            </div>
+            <div class="col-6">
+              <form class="d-flex form-inline justify-content-end">
+                <input class="form-control w-25" type="search" placeholder="Search By Location" aria-label="Search">
+                <div class="input-group-append">
+                  <span class="input-group-text bg-primary py-1" id="basic-addon2">
+                    <button class="btn btn-primary py-1" type="submit">Search</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+            </div>
+            <div style="overflow-x:auto;">
+            <table class="table table-bordered bg-light mb-0">
+            <thead>
+                <tr>
+                  <th scope="col">SN</th>
+                  <th scope="col">Room Tag</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Total Views</th>
+                  <th scope="col">Action</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70D</td>
+                  <td>KTMCH70E</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70D</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70D</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70D</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70D</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70D</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70D</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Feature</button>
+                  </td>
+                  <td>featured</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <div class="bg-light pt-2 pe-2">
+              <div class="row">
+              <div class="col-6">
+              <p class="fw-bold d-flex ps-3 justify-content-start">Showing 10 of 50</p>
+            </div>
+            <div class="col-6">
+             <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+            </div>
+          </div>
+        </div>
+              <div class="container pt-3 pb-3 ">
+            <h5 class="text-light">Featured List</h5>
+            <div class="bg-light py-2 pe-2">
+              <div class="row">
+              <div class="col-6">
+              <p class="fw-bold d-flex ps-3 justify-content-start">10 per page</p>
+            </div>
+            <div class="col-6">
+              <form class="d-flex form-inline justify-content-end">
+                <input class="form-control w-25" type="search" placeholder="Search By Location" aria-label="Search">
+                <div class="input-group-append">
+                  <span class="input-group-text bg-primary py-1" id="basic-addon2">
+                    <button class="btn btn-primary py-1" type="submit">Search</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+            </div>
+            <div style="overflow-x:auto;">
+            <table class="table table-bordered bg-light mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">SN</th>
+                  <th scope="col">Room Tag</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Total Views</th>
+                  <th scope="col">Featured Date</th>
+                  <th scope="col">Days Left</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70E</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>KTMCH70B</td>
+                  <td>KTMCH70C</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70F</td>
+                  <td>KTMCH70D</td>
+                  <td>KTMCH70F</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Remove</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <div class="bg-light pt-2 pe-2">
+              <div class="row">
+              <div class="col-6">
+              <p class="fw-bold d-flex ps-3 justify-content-start">Showing 10 of 50</p>
+            </div>
+            <div class="col-6">
+             <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- dashboard end -->
+{% endblock body %}

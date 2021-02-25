@@ -1,0 +1,77 @@
+{% extends 'user/base.html' %}
+{% block title %}EnquiryList{% endblock title %}
+{% block body %}
+    <!-- enquiry list start -->
+        <div class="col-md-9 col-lg-10 pb-3" style="background-color: #4d4d4d;">
+          <div class="container pt-3">
+            <h5 class="text-light">Enquiry List</h5>
+            <form class="d-flex form-inline mb-2">
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">Search</span>
+                  <input type="text" class="form-control" placeholder="RoomTag" aria-label="search" aria-describedby="basic-addon1">
+                </div>
+              </form>
+            <div style="overflow-x:auto;">
+            <table class="table table-bordered bg-light mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">SN</th>
+                  <th scope="col">Room Tag</th>
+                  <th scope="col">Name</th>
+                  <th scope="col">Phone</th>
+                  <th scope="col">Email</th>
+                  <th scope="col">Address</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+               
+                {% for enquiry in enquirys %}
+                {% for room in rooms %}
+                
+                {% if enquiry.room.id == room.id %}
+               
+                <tr>
+                  <th scope="row">{{ forloop.counter }}</th>
+                  <td>{{enquiry.room}} ////</td>
+                  <td>{{enquiry.name}}</td>
+                  <td>{{enquiry.phone}}</td>
+                  <td>{{enquiry.email}}</td>
+                  <td>{{enquiry.address}}</td>
+                  <td>
+                    <a type="button" class="btn btn-primary btn-sm m-0" href="{% url 'roomenqiury' enquiry.pk%}">View Detial</a>
+                    <a type="button" class="btn btn-primary btn-sm m-0">Delete</a>
+                    
+                  </td>
+                </tr>
+
+                {% endif %}
+
+                {% endfor %}
+                {% endfor %}
+                
+              </tbody>
+            </table>
+          </div>
+            <div class="bg-light pt-2 pe-2">
+              <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-6">
+              <p class="fw-bold d-flex ps-3 justify-content-center justify-content-sm-start justify-content-md-start justify-content-lg-start">Showing 10 of 50</p>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6">
+             <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center justify-content-sm-end justify-content-md-end justify-content-lg-end">
+                <li class="page-item"><a class="page-link" href="#"><<</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">>></a></li>
+              </ul>
+            </nav>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- enquiry list end -->
+{% endblock body %}

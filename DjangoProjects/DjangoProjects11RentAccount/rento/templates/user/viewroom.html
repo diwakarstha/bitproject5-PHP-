@@ -1,0 +1,128 @@
+{% extends 'user/base.html' %}
+{% block title %}AddRoom{% endblock title %}
+{% block body %}
+    <!-- dashboard start -->
+        <div class="col-md-9 col-lg-10" style="background-color: #4d4d4d;">
+          <div class="container pt-3 pb-3">
+            <h5 class="text-light">Room List</h5>
+            {% if not rooms %}
+                    <p class="text-light"> You havent added any rooms. Please add a room to view this page</p>
+                    <a class="btn btn-primary mt-1" href="{% url 'addroom' %}">Add Room</a>
+               {% else %}
+              <form class="d-flex form-inline mb-2">
+                <div class="input-group">
+                  <span class="input-group-text" id="basic-addon1">Search</span>
+                  <input type="text" class="form-control" placeholder="RoomTag" aria-label="search" aria-describedby="basic-addon1">
+                </div>
+              </form>
+            <div style="overflow-x:auto;">
+              
+              <table class="table table-bordered bg-light mb-0">
+                <thead>
+                  <tr>
+                    <th scope="col">SN</th>
+                    <th scope="col">RoomTag</th>
+                    <th scope="col">City Name</th>
+                    <th scope="col">Location</th>
+                    <th scope="col">House No.</th>
+                    <th scope="col">Floor</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Facility</th>
+                    <th scope="col">Action</th>
+                    <th scope="col">Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                {% for room in rooms%}
+                  <tr>
+                    <th class="roomId">{{ forloop.counter }}</th>
+                    <td>{{room.pk}}</td>
+                    <td>{{room.city}}</td>
+                    <td>{{room.location}}</td>
+                    <td>{{room.house_number}}</td>
+                    <td>{{room.floor}}</td>
+                    <td>{{room.price}}</td>
+                    <td>
+                      {% if room.water == True %}
+                      Water
+                      {% endif %}
+                      {% if room.internet == True %}
+                      Internet
+                      {% endif %}
+                      {% if room.parking == True %}
+                      Parking
+                      {% endif %}</td>
+                    <td>
+                      <a type="button" href="{% url 'editroom' room.pk%}" class="btn btn-primary btn-sm m-0">Edit</a>
+                      <a type="button" data-href="{% url 'deleteroom' room.pk%}" class="btn btn-primary btn-sm m-0" data-bs-toggle="modal" data-bs-target="#DeleteModal" >Delete</a>
+                      {% comment %} Delete modal BOX {% endcomment %}
+                      <div class="modal fade" id="DeleteModal" tabindex="-1" aria-labelledby="DeleteModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="DeleteModalLabel">Do you want to confirm Delete?</h5>
+                              {% comment %} <p class="debug-url"></p> {% endcomment %}
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <a type="submit" class="btn btn-primary btn-ok">Yes</a>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                      {% comment %} End Delete modal BOX {% endcomment %}
+                    </td>
+                    <td>
+                      <select class="form-select" aria-label="Default select example">
+                        <option selected>Public</option>
+                        <option value="1">Private</option>
+                      </select>
+                    </td>
+                  </tr>
+                  {% endfor %}
+                  
+                    
+                    
+                    
+                  
+                </tbody>
+                
+              </table>
+             
+            </div>
+            <div class="bg-light pt-2 pe-2">
+              <div class="row">
+                <div class="col-6">
+                  <p class="fw-bold d-flex ps-3 justify-content-start">Showing 10 of 50</p>
+                </div>
+                <div class="col-6">
+                  <nav aria-label="Page navigation example">
+                    <ul class="pagination justify-content-end">
+                      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                      <li class="page-item"><a class="page-link" href="#">1</a></li>
+                      <li class="page-item"><a class="page-link" href="#">2</a></li>
+                      <li class="page-item"><a class="page-link" href="#">3</a></li>
+                      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                    {% endif %}
+                  </nav>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                  
+    <!-- dashboard end -->
+{% endblock body %}
+{% block script %}
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+    $('#DeleteModal').on('show.bs.modal', function(e) {
+        $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+            
+        //$('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+    });
+</script>
+{% endblock script %}

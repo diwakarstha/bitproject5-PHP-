@@ -1,0 +1,34 @@
+intall python 3.9.1
+install django 3.1.4
+type (pip install pillow) in cmd for image and see Django Projects2ImageUpload
+
+To run any version of project except templates:
+1. go to project folder from any ide or cmd
+2. Type python manage.py runserver
+
+Project Documentation, Presentations and Necessary Diagrams are inside DjangoProjects15UIFinalProject
+
+Sources Followed To complete Projects are
+https://github.com/maxg203/Django-Tutorials/blob/master/home/views.py
+https://github.com/akjasim/cb_dj_dependent_dropdown
+https://www.youtube.com/watch?v=DVRTjxN9TMo
+https://www.youtube.com/watch?v=EX6Tt-ZW0so
+https://www.youtube.com/watch?v=obZMr9URmVI
+https://simpleisbetterthancomplex.com/tutorial/2016/08/03/how-to-paginate-with-django.html
+https://www.youtube.com/watch?v=SNk4kFYAGNU
+https://www.fotor.com/design //photo design easy
+https://stackoverflow.com/questions/34992165/how-get-the-src-value-from-the-img-clicked?answertab=oldest#tab-top
+https://www.youtube.com/watch?v=q3m6H9kHnvk
+https://www.youtube.com/watch?v=OvTs8BMLb7o
+https://stackoverflow.com/questions/8982295/confirm-deletion-in-modal-dialog-using-twitter-bootstrap
+https://docs.djangoproject.com/en/3.1/ref/models/fields/#choices
+https://www.youtube.com/watch?v=Tja4I_rgspI
+https://www.youtube.com/watch?v=eBsc65jTKvw&list=PL-51WBLyFTg2vW-_6XBoUpE7vpmoR3ztO&index=15
+https://stackoverflow.com/questions/41229963/how-to-calculate-diff-between-two-dates-in-django
+https://stackoverflow.com/questions/50196148/pass-value-to-bootstrap-modal-form-with-django
+https://stackoverflow.com/questions/1052531/get-user-group-in-a-template/17087532
+
+ 
+
+
+

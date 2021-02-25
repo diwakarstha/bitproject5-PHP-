@@ -1,0 +1,39 @@
+/*all page*/
+a:link{
+	text-decoration: none;
+}
+/*all page*/
+
+/*login css start*/
+.loginform:after {
+    position: absolute;
+    right: -14px;
+    top: -30px;
+    height: 660px;
+    width: 1px;
+    background: black;
+    content: "";
+}
+/*login css end*/
+
+/*roomdetail iframe css start*/
+.map-container{
+overflow:hidden;
+padding-bottom:56.25%;
+position:relative;
+height:0;
+}
+.map-container iframe{
+left:0;
+top:0;
+height:100%;
+width:100%;
+position:absolute;
+}
+/*roomdetail iframe css end*/
+
+/*footer quicklink css*/
+.quicklink a:hover{
+	text-decoration: underline;
+}
+/*footer quicklink css*/

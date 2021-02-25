@@ -1,0 +1,196 @@
+{% extends 'user/base.html' %}
+{% block title %}AddRoom{% endblock title %}
+{% block body %}
+    <!-- dashboard start -->
+        <div class="col-md-9 col-lg-9" style="background-color: #4d4d4d;">
+          <div class="container pt-3">
+            <h5 class="text-light">Room List</h5>
+            <div class="bg-light py-2 pe-2">
+              <div class="row">
+              <div class="col-6">
+              <p class="fw-bold d-flex ps-3 justify-content-start">10 per page</p>
+            </div>
+            <div class="col-6">
+              <form class="d-flex form-inline justify-content-end">
+                <input class="form-control w-25" type="search" placeholder="Search By Location" aria-label="Search">
+                <div class="input-group-append">
+                  <span class="input-group-text bg-primary py-1" id="basic-addon2">
+                    <button class="btn btn-primary py-1" type="submit">Search</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+            </div>
+            <div style="overflow-x:auto;">
+            <table class="table table-bordered bg-light mb-0">
+              <thead>
+                <tr>
+                  <th scope="col">RoomTag</th>
+                  <th scope="col">City Name</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">House No.</th>
+                  <th scope="col">Floor</th>
+                  <th scope="col">Price</th>
+                  <th scope="col">Facility</th>
+                  <th scope="col">Action</th>
+                  <th scope="col">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+              {% for room in rooms%}
+                <tr>
+                  <th scope="row">{{room.pk}}</th>
+                  <td>{{room.city}}</td>
+                  <td>{{room.location}}</td>
+                  <td>{{room.house_number}}</td>
+                  <td>{{room.floor}}</td>
+                  <td>{{room.price}}</td>
+                  <td>
+                    {% if room.water == True %}
+                    Water
+                    {% endif %}
+                    {% if room.internet == True %}
+                    Internet
+                    {% endif %}
+                    {% if room.parking == True %}
+                    Parking
+                    {% endif %}</td>
+                  <td>
+                    <a type="button" href="{% url 'editroom' room.pk%}" class="btn btn-primary btn-sm m-0">Edit</a>
+                    <button type="button" class="btn btn-primary btn-sm m-0">Delete</button>
+                  </td>
+                  <td>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Public</option>
+                      <option value="1">Private</option>
+                    </select>
+                  </td>
+                </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+            </div>
+            <div class="bg-light pt-2 pe-2">
+              <div class="row">
+              <div class="col-6">
+              <p class="fw-bold d-flex ps-3 justify-content-start">Showing 10 of 50</p>
+            </div>
+            <div class="col-6">
+             <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+            </div>
+          </div>
+        </div>
+                  <div class="container text-light col-lg-10 py-5 ">
+            <h3>Edit Room</h3>
+          <form>
+              <div class="row g-3 align-items-center mb-3">
+                <div class="col-lg-2">
+                  <label for="cityName" class="col-form-label">City Name:</label>
+                </div>
+                <div class="col-lg-4">
+                  <input type="text" id="cityName" class="form-control" aria-describedby="typeCityName">
+                </div>
+                <div class="col-lg-2">
+                  <label for="location" class="col-form-label">Location:</label>
+                </div>
+                <div class="col-lg-4">
+                  <input type="text" id="location" class="form-control" aria-describedby="typeLocation">
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-3">
+                <div class="col-lg-2">
+                  <label for="houseNumber" class="col-form-label">House No.:</label>
+                </div>
+                <div class="col-lg-4">
+                  <input type="text" id="houseNumber" class="form-control" aria-describedby="typeHouseNumber">
+                </div>
+                <div class="col-lg-2">
+                  <label for="floor" class="col-form-label">Floor:</label>
+                </div>
+                <div class="col-lg-4">
+                  <input type="text" id="floor" class="form-control" aria-describedby="typeFloor">
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-3">
+                <div class="col-lg-2">
+                  <label for="amount" class="col-form-label">Amount:</label>
+                </div>
+                <div class="col-lg-4">
+                  <input type="number" id="amount" class="form-control" aria-describedby="typeAmount">
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-3">
+                <div class="col-lg-2">
+                  <label for="uploadImage" class="col-form-label">Image:</label>
+                </div>
+                <div class="col-lg-3">
+                  <input type="file" id="myFile" class="form-control" name="filename">
+                </div>
+                <div class="col-lg-3">
+                  <input type="file" id="myFile" class="form-control" name="filename">
+                </div>
+                <div class="col-lg-3">
+                  <input type="file" id="myFile" class="form-control" name="filename">
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-3">
+                <div class="col-lg-2">
+                  <label for="facility" class="col-form-label">Facility:</label>
+                </div>
+                <div class="col-lg-auto">
+                  <label for="water" class="col-form-label"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">Water</label>
+                </div>
+                <div class="col-lg-auto">
+                  <label for="internet" class="col-form-label"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">Internet</label>
+                </div>
+                <div class="col-lg-auto">
+                  <label for="parking" class="col-form-label"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="...">Parking</label>
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-3">
+                <div class="col-lg-2">
+                  <label for="status" class="col-form-label">Status:</label>
+                </div>
+                <div class="col-lg-4">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Public</option>
+                    <option value="1">Private</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row g-3 align-items-center mb-3">
+                <div class="">
+                  <label for="roomDetail" class="col-form-label">Description:</label>
+                </div>
+                <div class="form-floating col-lg-15">
+                  <textarea class="form-control " placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                  <label for="floatingTextarea2">Comments</label>
+                </div>
+              </div>
+              <!--Google map-->
+                <div class="ratio ratio-16x9 mb-3">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.5949344361034!2d85.35132794299024!3d27.72038838237154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19633db6135b%3A0xc051eabacae5ea9d!2sCHUCHEPATI%20BUS%20STOP!5e0!3m2!1sen!2snp!4v1607670622014!5m2!1sen!2snp" frameborder="0"
+                    style="border:0" allowfullscreen></iframe>
+                </div>
+              <!--Google Maps-->
+              <div class="row g-3 align-items-center mb-3">
+                <div class="col-lg-15 text-end">
+                  <button type="submit" class="btn btn-primary">Save</button>
+                  <button type="cancel" class="btn btn-primary">Cancel</button>
+                </div>
+              </div>
+            </form>
+          </div>
+      </div>
+    <!-- dashboard end -->
+{% endblock body %}

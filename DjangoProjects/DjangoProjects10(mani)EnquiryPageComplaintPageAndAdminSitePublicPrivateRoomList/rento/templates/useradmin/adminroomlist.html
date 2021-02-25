@@ -1,0 +1,76 @@
+{% extends 'useradmin/base.html' %}
+{% block title %}AddRoom{% endblock title %}
+{% block body %}
+        <div class="col-lg-10 d-none d-sm-none d-md-block d-lg-block" style="background-color: #4d4d4d; height:690px;">
+          <div class="container pt-3">
+            <h5 class="text-light">Rooms List</h5>
+            <div class="bg-light py-2 pe-2">
+              <div class="row">
+              <div class="col-6">
+              <p class="fw-bold d-flex ps-3 justify-content-start">10 per page</p>
+            </div>
+            <div class="col-6">
+              <form class="d-flex form-inline justify-content-end">
+                <input class="form-control w-25" type="search" placeholder="Search By Name" aria-label="Search">
+                <div class="input-group-append">
+                  <span class="input-group-text bg-primary py-1" id="basic-addon2">
+                    <button class="btn btn-primary py-1" type="submit">Search</button>
+                  </span>
+                </div>
+              </form>
+            </div>
+          </div>
+            </div>
+            <table class="table table-bordered bg-light mb-0">
+             <thead>
+                <tr>
+                  <th scope="col">SN</th>
+                  <th scope="col">Room Tag</th>
+                  <th scope="col">Room Owner</th>
+                  <th scope="col">Location</th>
+                  <th scope="col">Amount</th>
+                  <th scope="col">Total Views</th>
+                  <th scope="col">Status</th>
+                  <th scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% for room in rooms %}
+                <tr>
+                  <th scope="row">{{ forloop.counter }} </th>
+                  <td>{{ room.id }}</td>
+                  <td>{{ room.user }}</td>
+                  <td>{{ room.city }}</td>
+                  <td>{{ room.price }}</td>
+                  <td>{{ room.views }}</td>
+                  <td>{{ room.room_status }}</td>
+                  <td>
+                    <button type="button" class="btn btn-primary btn-sm m-0" disabled>View</button>
+                  </td>
+                </tr>
+                {% endfor %}
+               
+              </tbody>
+            </table>
+            <div class="bg-light pt-2 pe-2">
+              <div class="row">
+              <div class="col-6">
+              <p class="fw-bold d-flex ps-3 justify-content-start">Showing 10 of 50</p>
+            </div>
+            <div class="col-6">
+             <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-end">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+              </ul>
+            </nav>
+          </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  <!-- dashboard end -->
+{% endblock body %}

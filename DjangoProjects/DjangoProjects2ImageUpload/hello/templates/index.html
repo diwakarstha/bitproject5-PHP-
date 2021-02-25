@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+<main>
+      <!-- slider start-->
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+          <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <!-- carousel text start -->
+          <div class="carousel-caption">
+            <p><a class="btn btn-lg btn-primary" href="registration" role="button">Register</a> To Rent Your Room</p>
+            <p>Find Room Of Your Choice</p>
+            <form class="d-flex form-inline justify-content-center">
+              <input class="form-control w-25" type="search" placeholder="Search By Location" aria-label="Search">
+              <div class="input-group-append">
+                <span class="input-group-text bg-primary py-1" id="basic-addon2">
+                  <button class="btn btn-primary py-1" type="submit">Search</button>
+                </span>
+              </div>
+            </form>
+          </div>
+          <!-- carousel text end -->
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src='{% static 'image/image1.jpg' %}' alt='Rento'></svg>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src='{% static 'image/image2.jpg' %}' alt='Rento'></svg>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/><img src='{% static 'image/image2.jpg' %}' alt='Rento'></svg>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </a>
+        
+        </div>
+        <!-- slider end -->
+        <!-- featured room start -->
+        <section class="container my-5">
+        <div class="container">
+            <h2 class="text-light text-center mb-5">Featured Room</h2>
+        </div>
+        <div class="row container mt-3">
+            <div class='col-lg-3 col-md-6 col-12 mb-5'>
+            <div id="roomCard" class='card'>
+                            <a href="roomdetail"><img src='{% static 'image/room1.jpg' %}' class='card-img-top resize' height="190" alt='Rento'></a>
+                            <div class='card-body'>
+                            <h5 class='card-title' >Price: 10,000</h5>
+                            <p class='card-text '>
+                                Chuchepati, chabahil
+                            </p>
+                            <p class='card-text'>
+                                Facilities:
+                            </p>
+                            <p class='card-text'>
+                                Water Parking Wifi
+                            </p>
+                            <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                            </div>
+                        </div>
+            </div>
+            <div class='col-lg-3 col-md-6 col-12 mb-5'>
+            <div id="roomCard" class='card'>
+                            <a href="roomdetail"><img src='{% static 'image/room1.jpg' %}' class='card-img-top' height="190" alt='Rento'></a>
+                            <div class='card-body'>
+                            <h5 class='card-title' >Price: 10,000</h5>
+                            <p class='card-text '>
+                                Chuchepati, chabahil
+                            </p>
+                            <p class='card-text'>
+                                Facilities:
+                            </p>
+                            <p class='card-text'>
+                                Water Parking Wifi
+                            </p>
+                            <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                            </div>
+                        </div>
+            </div>
+            <div class='col-lg-3 col-md-6 col-12 mb-5'>
+            <div id="roomCard" class='card'>
+                            <a href="roomdetail"><img src='{% static 'image/room1.jpg' %}' class='card-img-top' height="190" alt='Rento'></a>
+                            <div class='card-body'>
+                            <h5 class='card-title' >Price: 10,000</h5>
+                            <p class='card-text '>
+                                Chuchepati, chabahil
+                            </p>
+                            <p class='card-text'>
+                                Facilities:
+                            </p>
+                            <p class='card-text'>
+                                Water Parking Wifi
+                            </p>
+                            <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                            </div>
+                        </div>
+            </div>
+            <div class='col-lg-3 col-md-6 col-12 mb-5'>
+            <div id="roomCard" class='card'>
+                            <a href="roomdetail"><img src='{% static 'image/room1.jpg' %}' class='card-img-top' height="190" alt='Rento'></a>
+                            <div class='card-body'>
+                            <h5 class='card-title' >Price: 10,000</h5>
+                            <p class='card-text '>
+                                Chuchepati, chabahil
+                            </p>
+                            <p class='card-text'>
+                                Facilities:
+                            </p>
+                            <p class='card-text'>
+                                Water Parking Wifi
+                            </p>
+                            <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                            </div>
+                        </div>
+            </div>
+            <div class='col-lg-3 col-md-6 col-12 mb-5'>
+            <div id="roomCard" class='card'>
+                            <a href="roomdetail"><img src='{% static 'image/room1.jpg' %}' class='card-img-top' height="190" alt='Rento'></a>
+                            <div class='card-body'>
+                            <h5 class='card-title' >Price: 10,000</h5>
+                            <p class='card-text '>
+                                Chuchepati, chabahil
+                            </p>
+                            <p class='card-text'>
+                                Facilities:
+                            </p>
+                            <p class='card-text'>
+                                Water Parking Wifi
+                            </p>
+                            <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                            </div>
+                        </div>
+            </div>
+            <div class='col-lg-3 col-md-6 col-12 mb-5'>
+            <div id="roomCard" class='card'>
+                            <a href="roomdetail"><img src='{% static 'image/room1.jpg' %}' class='card-img-top' height="190" alt='Rento'></a>
+                            <div class='card-body'>
+                            <h5 class='card-title' >Price: 10,000</h5>
+                            <p class='card-text '>
+                                Chuchepati, chabahil
+                            </p>
+                            <p class='card-text'>
+                                Facilities:
+                            </p>
+                            <p class='card-text'>
+                                Water Parking Wifi
+                            </p>
+                            <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                            </div>
+                        </div>
+            </div>
+            <div class='col-lg-3 col-md-6 col-12 mb-5'>
+            <div id="roomCard" class='card'>
+                            <a href="roomdetail"><img src='{% static 'image/image1.jpg' %}' class='card-img-top' height="190" alt='Rento'></a>
+                            <div class='card-body'>
+                            <h5 class='card-title' >Price: 10,000</h5>
+                            <p class='card-text '>
+                                Chuchepati, chabahil
+                            </p>
+                            <p class='card-text'>
+                                Facilities:
+                            </p>
+                            <p class='card-text'>
+                                Water Parking Wifi
+                            </p>
+                            <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                            </div>
+                        </div>
+            </div>
+            <div class='col-lg-3 col-md-6 col-12 mb-5'>
+            <div id="roomCard" class='card'>
+                            <a href="roomdetail"><img src='{% static 'image/image1.jpg' %}' class='card-img-top' height="190" alt='Rento'></a>
+                            <div class='card-body'>
+                            <h5 class='card-title' >Price: 10,000</h5>
+                            <p class='card-text '>
+                                Chuchepati, chabahil
+                            </p>
+                            <p class='card-text'>
+                                Facilities:
+                            </p>
+                            <p class='card-text'>
+                                Water Parking Wifi
+                            </p>
+                            <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                            </div>
+                        </div>
+            </div>
+        </div>
+        </section>
+        <!-- featured room start -->
+</main>
+{% endblock body %}

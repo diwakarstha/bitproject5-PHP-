@@ -1,0 +1,230 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Rooms{% endblock title %}
+{% block body %}
+    <main>
+        <div class="container-fluid" style="background-color: #4d4d4d;">
+          <div class="row">
+            <div id="filterBar" class="col-md-3 col-lg-2 d-md-block text-light collapse" style="background-color: #404040;" >
+              <div class="bg-dark mt-5 mb-2 pt-2 pb-4">
+                <label class="ms-3">Location:</label>
+                <div class="px-3 mt-2">
+                  <select class="form-control" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'aria-label="Default select example">
+                    <option selected>Select Location</option>
+                    <option value="1">Jorpati</option>
+                    <option value="1">Chuchepati</option>
+                    <option value="1">Boudha</option>
+                    <option value="1">Jorpati</option>
+                    <option value="1">Chuchepati</option>
+                    <option value="1">Boudha</option>
+                    <option value="1">Jorpati</option>
+                    <option value="1">Chuchepati</option>
+                    <option value="1">Boudha</option>
+                    <option value="1">Jorpati</option>
+                    <option value="1">Chuchepati</option>
+                    <option value="1">Boudha</option>
+                    <option value="1">Jorpati</option>
+                    <option value="1">Chuchepati</option>
+                    <option value="1">Boudha</option>
+                    <option value="1">Jorpati</option>
+                    <option value="1">Chuchepati</option>
+                    <option value="1">Boudha</option>
+                  </select>
+                </div>
+              </div>
+              <div class="bg-dark mb-2 pt-2">
+                <label class="ms-3">Facility:</label>
+                <a class="nav-link text-light active" aria-current="page" href="#"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Wifi</a>
+                <a class="nav-link text-light active" aria-current="page" href="#"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Parking</a>
+                <a class="nav-link text-light active" aria-current="page" href="#"><input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..."> Water</a>
+              </div>
+              <div class="bg-dark pt-2">
+                <label class="ms-3">Price:</label>
+                <a class="nav-link text-light active" aria-current="page" href="#">Low to High</a>
+                <a class="nav-link text-light active" aria-current="page" href="#">High to Low</a>
+              </div>
+            </div>
+            <div class="col-md-9 ms-sm-auto col-lg-10 px-md-4"  >
+              <!-- pagination top start -->
+              <div class=" mt-5 bg-light">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- pagination top end -->
+              <!-- show room start -->
+              <section class="container my-5">
+                <!-- <h2 class="text-light text-center mb-5">Rooms</h2> -->
+                <div class="row container mt-3">
+                  <div class='col-lg-3 col-md-6 col-12 mb-5'>
+                    
+                      <div id="roomCard" class='card'>
+                        <a href="roomdetail"><img src="{% static 'image/image1.jpg' %}" class='card-img-top' height="190"alt='Rento'></a>
+                        <div class='card-body'>
+                          <h5 class='card-title' >Price: 10,000</h5>
+                          <p class='card-text '>
+                            Chuchepati, chabahil
+                          </p>
+                          <p class='card-text'>
+                            Facilities:
+                          </p>
+                          <p class='card-text'>
+                             Water Parking Wifi
+                          </p>
+                          <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                        </div>
+                      </div>
+                    
+                  </div>
+                  <div class='col-lg-3 col-md-6 col-12 mb-5'>
+                     <div id="roomCard" class='card'>
+                        <a href="roomdetail"><img src="{% static 'image/image1.jpg' %}" class='card-img-top' height="190"alt='Rento'></a>
+                        <div class='card-body'>
+                          <h5 class='card-title' >Price: 10,000</h5>
+                          <p class='card-text '>
+                            Chuchepati, chabahil
+                          </p>
+                          <p class='card-text'>
+                            Facilities:
+                          </p>
+                          <p class='card-text'>
+                             Water Parking Wifi
+                          </p>
+                          <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class='col-lg-3 col-md-6 col-12 mb-5'>
+                     <div id="roomCard" class='card'>
+                        <a href="roomdetail"><img src="{% static 'image/image1.jpg' %}" class='card-img-top' height="190"alt='Rento'></a>
+                        <div class='card-body'>
+                          <h5 class='card-title' >Price: 10,000</h5>
+                          <p class='card-text '>
+                            Chuchepati, chabahil
+                          </p>
+                          <p class='card-text'>
+                            Facilities:
+                          </p>
+                          <p class='card-text'>
+                             Water Parking Wifi
+                          </p>
+                          <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class='col-lg-3 col-md-6 col-12 mb-5'>
+                     <div id="roomCard" class='card'>
+                        <a href="roomdetail"><img src="{% static 'image/image1.jpg' %}" class='card-img-top' height="190"alt='Rento'></a>
+                        <div class='card-body'>
+                          <h5 class='card-title' >Price: 10,000</h5>
+                          <p class='card-text '>
+                            Chuchepati, chabahil
+                          </p>
+                          <p class='card-text'>
+                            Facilities:
+                          </p>
+                          <p class='card-text'>
+                             Water Parking Wifi
+                          </p>
+                          <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class='col-lg-3 col-md-6 col-12 mb-5'>
+                     <div id="roomCard" class='card'>
+                        <a href="roomdetail"><img src="{% static 'image/image1.jpg' %}" class='card-img-top' height="190"alt='Rento'></a>
+                        <div class='card-body'>
+                          <h5 class='card-title' >Price: 10,000</h5>
+                          <p class='card-text '>
+                            Chuchepati, chabahil
+                          </p>
+                          <p class='card-text'>
+                            Facilities:
+                          </p>
+                          <p class='card-text'>
+                             Water Parking Wifi
+                          </p>
+                          <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class='col-lg-3 col-md-6 col-12 mb-5'>
+                     <div id="roomCard" class='card'>
+                        <a href="roomdetail"><img src="{% static 'image/image1.jpg' %}" class='card-img-top' height="190"alt='Rento'></a>
+                        <div class='card-body'>
+                          <h5 class='card-title' >Price: 10,000</h5>
+                          <p class='card-text '>
+                            Chuchepati, chabahil
+                          </p>
+                          <p class='card-text'>
+                            Facilities:
+                          </p>
+                          <p class='card-text'>
+                             Water Parking Wifi
+                          </p>
+                          <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class='col-lg-3 col-md-6 col-12 mb-5'>
+                     <div id="roomCard" class='card'>
+                        <a href="roomdetail"><img src="{% static 'image/image1.jpg' %}" class='card-img-top' height="190"alt='Rento'></a>
+                        <div class='card-body'>
+                          <h5 class='card-title' >Price: 10,000</h5>
+                          <p class='card-text '>
+                            Chuchepati, chabahil
+                          </p>
+                          <p class='card-text'>
+                            Facilities:
+                          </p>
+                          <p class='card-text'>
+                             Water Parking Wifi
+                          </p>
+                          <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                        </div>
+                      </div>
+                  </div>
+                  <div class='col-lg-3 col-md-6 col-12 mb-5'>
+                     <div id="roomCard" class='card'>
+                        <a href="roomdetail"><img src="{% static 'image/image1.jpg' %}" class='card-img-top' height="190"alt='Rento'></a>
+                        <div class='card-body'>
+                          <h5 class='card-title' >Price: 10,000</h5>
+                          <p class='card-text '>
+                            Chuchepati, chabahil
+                          </p>
+                          <p class='card-text'>
+                            Facilities:
+                          </p>
+                          <p class='card-text'>
+                             Water Parking Wifi
+                          </p>
+                          <a  class='btn btn-primary mt-2' href='roomdetail' >Detail</a>
+                        </div>
+                      </div>
+                </div>
+              </section>
+              <!-- show room end -->
+              <!-- pagination buttom start -->
+              <div class="bg-light text-light">
+                <nav aria-label="Page navigation example">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                  </ul>
+                </nav>
+              </div>
+              <!-- pagination buttom end -->
+            </div>
+          </div>
+        </div>
+      </main>
+{% endblock body %}
